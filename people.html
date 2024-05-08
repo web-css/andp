@@ -6,12 +6,14 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="modinatheme">
-        <meta name="description" content="Oraxis - Architecture & Interior Html Template">
+        <meta name="author" content="严超">
+        <meta name="description" content="情感神经科学与发展心理病理实验室">
         <!-- ======== Page title ============ -->
         <title>情感神经科学与发展心理病理实验室</title>
         <!--<< Favicon >>-->
         <link rel="shortcut icon" href="assets/img/favicon.ico">
+        <!-- element-plus -->
+        <link href="https://cdn.bootcdn.net/ajax/libs/element-plus/2.3.12/index.css" rel="stylesheet">
         <!--<< Bootstrap min.css >>-->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <!--<< Font Awesome.css >>-->
@@ -22,18 +24,11 @@
         <link rel="stylesheet" href="assets/css/magnific-popup.css">
         <!--<< MeanMenu.css >>-->
         <link rel="stylesheet" href="assets/css/meanmenu.css">
-        <!--<< Swiper Bundle.css >>-->
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        <!--<< Nice Select.css >>-->
-        <link rel="stylesheet" href="assets/css/nice-select.css">
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="assets/css/main.css">
-        <!--<< Style.css >>-->
-        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-
         <!-- Back To Top Start -->
         <div class="scroll-up">
             <svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -155,7 +150,7 @@
         <div class="offcanvas__overlay"></div>
 
         <!-- Header Area Start -->
-        <header>
+        <header class="g-header">
             <div id="header-sticky" class="header-1 header-3">
                 <div class="container-fluid">
                     <div class="mega-menu-wrapper">
@@ -234,60 +229,64 @@
         <!-- Team Section Start -->
         <section class="team-section section-padding fix">
             <div class="container">
-                <div class="row">
-                    <div class="input-single" style="margin-bottom: 20px;display: flex; justify-content: flex-end;">
-                        <div class="nice-select" tabindex="0">
-                            <span class="current">全部</span>
-                            <ul class="list">
-                                <li data-value="0" class="option selected">全部</li>
-                                <li data-value="1" class="option">PI</li>
-                                <li data-value="2" class="option">助理</li>
-                                <li data-value="3" class="option">博士后</li>
-                                <li data-value="4" class="option">研究生</li>
-                                <li data-value="5" class="option">本科生</li>
-                                <li data-value="6" class="option">科研助理</li>
-                                <li data-value="7" class="option">前成员</li>
-                            </ul>
+                <div class="row" id="peopleContainer">
+                    <div id="app">
+                        <div style="margin-bottom: 20px;display: flex; justify-content: flex-end;">
+                            <el-select
+                                v-model="curretPosition"
+                                placeholder="Select"
+                                size="large"
+                                style="margin-bottom: 40px;"
+                            >
+                                <el-option
+                                    v-for="item in options"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value"
+                                />
+                            </el-select>
                         </div>
-                     </div>
 
-                    <div class="wow fadeInUp">
-                        <div class="team-card-items style-1">
+                        <div 
+                            v-for="(item, index) in filterList" 
+                            :key="item.name + item.avatar + index" 
+                            class="team-card-items style-1"
+                            :style="{
+                                marginBottom: index === filterList.length - 1 
+                                    ? 0
+                                    : (((index < filterList.length - 1) && item.position !== filterList[index + 1].position) ? '80px' : '40px')
+                            }"
+                        >
+                            <h3 
+                                v-if="index === 0 || item.position !== filterList[index -1].position" 
+                                style="position: absolute; top: -40px; user-select: none; line-height: 20px;"
+                            >     
+                                {{options[item.position].label}}
+                            </h3>
+
                             <div class="team-image">
-                                <img src="assets/img/error.png" alt="team-img">
+                                <img :src="'people/' + item.avatar" alt="team-img">
                             </div>
                             <div class="team-content">
-                                <h3>严超</h3>
-                                <p>博士 实验室PI</p>
-                                <p>华东师范大学心理与认知科学学院健康与临床心理系主任、博导</p>
-                                <p>2008 华东师范大学 心理学系 学士</p>
-                                <p>2013 中国科学院大学 认知神经科学 博士</p>
+                                <h3>{{item.name}}</h3>
+                                <p>{{item.lab_position}}</p>
+                                <p>{{item.social_positions}}</p>
+                                <p v-for="edu in item.education_history || []" :key="edu">{{edu}}</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="wow fadeInUp">
-                        <div class="team-card-items style-1">
-                            <div class="team-image">
-                                <img src="assets/img/error.png" alt="team-img">
-                            </div>
-                            <div class="team-content">
-                                <h3>沈蕾</h3>
-                                <p>华东师范大学心理与认知科学学院 博士生</p>
-                                <p>2019年 广西师范大学 心理学院 学士</p>
-                                <p>2022年 上海师范大学 心理学系 硕士</p>
-                            </div>
-                        </div>
+
+                        <el-empty v-if="filterList.length === 0" :description="CURRENT_LANG === 'EN'?'empty':'暂无内容'" />
                     </div>
                 </div>
             </div>
         </section>
-
+       
         <!-- Footer Section Start -->
         <footer class="footer-section section-bg-2">
             <div class="container">
                 <div class="footer-widgets-wrapper style-1">
                     <div class="row">
-                        <div class="col-xl-4 col-lg-12 col-md-12 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="col-xl-4 col-lg-12 col-md-12 wow fadeInUp">
                             <div class="single-footer-widget">
                                 <div class="widget-head">
                                     <img 
@@ -303,7 +302,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="col-xl-4 col-lg-6 col-md-12 wow fadeInUp">
                             <div class="single-footer-widget">
                                 <div class="widget-head">
                                     <h3 i18n="Links"></h3>
@@ -318,7 +317,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-6 col-md-12 wow fadeInUp" data-wow-delay=".7s">
+                        <div class="col-xl-4 col-lg-6 col-md-12 wow fadeInUp">
                             <div class="single-footer-widget">
                                 <div class="widget-head">
                                     <h3 i18n="CONTACT"></h3>
@@ -367,14 +366,8 @@
         <script src="assets/js/viewport.jquery.js"></script>
         <!--<< Bootstrap Js >>-->
         <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <!--<< Nice Select Js >>-->
-        <script src="assets/js/jquery.nice-select.min.js"></script>
-        <!--<< Waypoints Js >>-->
-        <script src="assets/js/jquery.waypoints.js"></script>
         <!--<< Counterup Js >>-->
         <script src="assets/js/jquery.counterup.min.js"></script>
-        <!--<< Swiper Slider Js >>-->
-        <script src="assets/js/swiper-bundle.min.js"></script>
         <!--<< MeanMenu Js >>-->
         <script src="assets/js/jquery.meanmenu.min.js"></script>
         <!--<< Magnific Popup Js >>-->
@@ -385,5 +378,59 @@
          <script src="assets/js/jquery.i18n.properties.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.3.4/vue.global.prod.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/element-plus/2.3.12/index.full.min.js"></script>
+
+        <script>
+            const HelloVueApp = {
+                data() {
+                    return {
+                        CURRENT_LANG: window.localStorage.getItem('CURRENT_LANG') === 'EN' ? 'EN' : 'CN',
+                        list: [],
+                        curretPosition: 0,
+                        options: [
+                            { label: '全部', value: 0, },
+                            { label: 'PI', value: 1, },
+                            { label: '助理', value: 2, },
+                            { label: '博士后', value: 3, },
+                            { label: '研究生', value: 4, },
+                            { label: '本科生', value: 5, },
+                            { label: '科研助理', value: 6, },
+                            { label: '前成员', value: 7, },
+                        ]
+                    }
+                },
+                computed: {
+                    filterList() {
+                        return this.list.filter(item => this.curretPosition === 0 ? true : item.position === this.curretPosition)
+                    }
+                },
+                created() {
+                    this.loadList();
+                },
+                methods: {
+                    loadList() {
+                        $.ajax({
+                            url: 'people/data.json',
+                            method: 'GET',
+                            success:(res) => {
+                                var CURRENT_LANG = window.localStorage.getItem('CURRENT_LANG') === 'EN' ? 'EN' : 'CN';
+                                
+                                this.list = res.sort((a,b)=> a.position - b.position).map(item => {
+                                    const res = item[CURRENT_LANG] || item.CN;
+
+                                    return {
+                                        ...res,
+                                        position: item.position,
+                                    }
+                                });
+                            }
+                        })
+                    }
+                }
+            }
+
+            Vue.createApp(HelloVueApp).use(ElementPlus).mount('#app');
+        </script>
     </body>
 </html>

@@ -7,6 +7,7 @@ Version: 1.0.0
 /*CSS Table Of Content Ends Here*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
+  --el-color-primary: #A6A182;
   --body: #fff;
   --black: #000;
   --white: #fff;
@@ -24,6 +25,19 @@ Version: 1.0.0
   --color-gradient-1: linear-gradient(to left, #fd4a81, #ff5e73, #ff7269, #ff8662, #fc9860);
   ---color-gradient-2: linear-gradient(to left, #ff8662, #fc9860, #ff7269, #fd4a81, #ff5e73);
   ---box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.05);
+}
+.el-select {
+  width: 100%;
+  max-width: 480px;
+  min-width: 320px;
+}
+.el-input {
+  --el-input-height: 48px;
+  --el-input-border-radius: 2px;
+}
+.el-select-dropdown__item {
+  height: 48px;
+  line-height: 48px;
 }
 
 .theme-btn {
@@ -186,15 +200,6 @@ button {
   border: none;
   background-color: transparent;
   padding: 0;
-}
-
-input:focus {
-  color: var(--white);
-  outline: none;
-}
-
-input {
-  color: var(--white);
 }
 
 h1,
@@ -877,6 +882,9 @@ input.main-search-input::placeholder {
 .header-top-wrapper .top-right .social-icon i:hover {
   color: var(--theme);
 }
+.g-header {
+  height: 72px;
+}
 
 .header-main {
   display: flex;
@@ -897,7 +905,8 @@ input.main-search-input::placeholder {
   list-style: none;
   display: inline-block;
   margin-inline-end: 30px;
-  padding: 30px 0;
+  line-height: 40px;
+  /* padding: 30px 0; */
 }
 .header-main .main-menu ul li:last-child {
   margin-inline-end: 0;
@@ -4635,10 +4644,15 @@ input.main-search-input::placeholder {
 }
 
 .team-card-items {
+  position: relative;
+  min-height: 200px;
   margin-bottom: 40px;
   border-radius: 2px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background-color: var(--bg);
+}
+.team-card-items:last-child {
+  margin-bottom: 0;
 }
 .team-card-items.style-1 {
   display: flex;
@@ -7183,6 +7197,7 @@ input.main-search-input::placeholder {
 .blog-wrapper .single-blog-post {
   position: relative;
   display: flex;
+  min-height: 160px;
   margin-bottom: 40px;
 }
 
@@ -7349,7 +7364,7 @@ input.main-search-input::placeholder {
   margin-right: 20px;
   position: relative;
   margin-bottom: -2px;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 .blog-wrapper .single-blog-post .post-featured-thumb .post-date {
   position: absolute;
@@ -7373,6 +7388,7 @@ input.main-search-input::placeholder {
     width: 100%;
     flex: 0 0 240px;
     margin-bottom: 20px;
+    margin-right: 0;
   }
 }
 .blog-wrapper .single-blog-post .post-featured-thumb .video-play-btn {

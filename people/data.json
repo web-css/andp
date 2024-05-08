@@ -1,0 +1,28 @@
+[
+	{
+		"position": 1,
+		"CN": {
+			"name": "严超",
+			"avatar": "0001.png",
+			"lab_position": "博士 实验室PI",
+			"social_positions": "华东师范大学心理与认知科学学院健康与临床心理系主任、博导",
+			"education_history": [
+				"2008 华东师范大学 心理学系 学士",
+				"2013 中国科学院大学 认知神经科学 博士"
+			]
+		}
+	},
+	{
+		"position": 4,
+		"CN": {
+			"name": "沈蕾",
+			"avatar": "0002.png",
+			"lab_position": "",
+			"social_positions": "华东师范大学心理与认知科学学院健康与临床心理系主任、博导",
+			"education_history": [
+				"2019年 广西师范大学 心理学院 学士",
+				"2022年 上海师范大学 心理学系 硕士"
+			]
+		}
+	}
+]
