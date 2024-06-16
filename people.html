@@ -13,7 +13,7 @@
         <!--<< Favicon >>-->
         <link rel="shortcut icon" href="assets/img/favicon.ico">
         <!-- element-plus -->
-        <link href="https://cdn.bootcdn.net/ajax/libs/element-plus/2.3.12/index.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css" />
         <!--<< Bootstrap min.css >>-->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <!--<< Font Awesome.css >>-->
@@ -232,49 +232,39 @@
                 <div class="row" id="peopleContainer">
                     <div id="app">
                         <div style="margin-bottom: 20px;display: flex; justify-content: flex-end;">
-                            <el-select
-                                v-model="curretPosition"
-                                placeholder="Select"
-                                size="large"
-                                style="margin-bottom: 40px;"
-                            >
-                                <el-option
-                                    v-for="item in options"
-                                    :key="item.value"
-                                    :label="item.label"
-                                    :value="item.value"
-                                />
+                            <el-select v-model="curretPosition" placeholder="Select" size="large"
+                                style="margin-bottom: 40px;">
+                                <el-option v-for="item in options" :key="item.value" :label="item.label"
+                                    :value="item.value" />
                             </el-select>
                         </div>
-
-                        <div 
-                            v-for="(item, index) in filterList" 
-                            :key="item.name + item.avatar + index" 
-                            class="team-card-items style-1"
-                            :style="{
-                                marginBottom: index === filterList.length - 1 
-                                    ? 0
-                                    : (((index < filterList.length - 1) && item.position !== filterList[index + 1].position) ? '80px' : '40px')
-                            }"
-                        >
-                            <h3 
-                                v-if="index === 0 || item.position !== filterList[index -1].position" 
-                                style="position: absolute; top: -40px; user-select: none; line-height: 20px;"
-                            >     
+    
+                        <div v-for="(item, index) in filterList" :key="item.name + item.avatar + index"
+                            class="team-card-items style-1" :style="{
+                                    marginBottom: index === filterList.length - 1 
+                                        ? 0
+                                        : (((index < filterList.length - 1) && item.position !== filterList[index + 1].position) ? '80px' : '40px')
+                                }">
+                            <h3 v-if="index === 0 || item.position !== filterList[index -1].position"
+                                style="position: absolute; top: -40px; user-select: none; line-height: 20px;">
                                 {{options[item.position].label}}
                             </h3>
-
+    
                             <div class="team-image">
                                 <img :src="'people/' + item.avatar" alt="team-img">
                             </div>
+    
                             <div class="team-content">
                                 <h3>{{item.name}}</h3>
-                                <p>{{item.lab_position}}</p>
-                                <p>{{item.social_positions}}</p>
-                                <p v-for="edu in item.education_history || []" :key="edu">{{edu}}</p>
+                                <p>{{item.title}}</p>
+                                <p>{{item.affiliations}}</p>
+                                <p>{{item.education}}</p>
+                                <p>{{item.professional_title}}</p>
+                                <p>{{item.research_focus}}</p>
+                                <p>{{item.email}}</p>
                             </div>
                         </div>
-
+    
                         <el-empty v-if="filterList.length === 0" :description="CURRENT_LANG === 'EN'?'empty':'暂无内容'" />
                     </div>
                 </div>
@@ -306,12 +296,40 @@
                             <div class="single-footer-widget">
                                 <div class="widget-head">
                                     <h3 i18n="Links"></h3>
-                                </div>
+                                </div>                                
                                 <ul class="list-items">
                                     <li>
                                         <a href="https://psy.ecnu.edu.cn/" target="_blank">
                                             <i class="fas fa-chevron-right"></i>
                                             华东师范大学心理与认知科学学院
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://childpsylab.com/"
+                                            target="_blank">
+                                            <i class="fas fa-chevron-right"></i>
+                                            北京儿童医院李瑛主任
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.bch.com.cn/Html/Index.html"
+                                            target="_blank">
+                                            <i class="fas fa-chevron-right"></i>
+                                            北京儿童医院心身医学科
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"
+                                            target="_blank">
+                                            <i class="fas fa-chevron-right"></i>
+                                            首都师范大学王亚老师
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"
+                                            target="_blank">
+                                            <i class="fas fa-chevron-right"></i>
+                                            中科院心理研究所陈楚侨老师
                                         </a>
                                     </li>
                                 </ul>
@@ -378,8 +396,8 @@
          <script src="assets/js/jquery.i18n.properties.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
-        <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.3.4/vue.global.prod.min.js"></script>
-        <script src="https://cdn.bootcdn.net/ajax/libs/element-plus/2.3.12/index.full.min.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="https://unpkg.com/element-plus"></script>
 
         <script>
             const HelloVueApp = {
@@ -396,7 +414,7 @@
                             { label: '研究生', value: 4, },
                             { label: '本科生', value: 5, },
                             { label: '科研助理', value: 6, },
-                            { label: '前成员', value: 7, },
+                            { label: '前成员/学生', value: 7, },
                         ]
                     }
                 },

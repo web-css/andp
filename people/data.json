@@ -2,27 +2,507 @@
 	{
 		"position": 1,
 		"CN": {
-			"name": "严超",
 			"avatar": "0001.png",
-			"lab_position": "博士 实验室PI",
-			"social_positions": "华东师范大学心理与认知科学学院健康与临床心理系主任、博导",
-			"education_history": [
-				"2008 华东师范大学 心理学系 学士",
-				"2013 中国科学院大学 认知神经科学 博士"
-			]
+			"name": "严超",
+			"title": "博士 实验室PI",
+			"affiliations": "华东师范大学心理与认知科学学院健康与临床心理系主任、教授，博导",
+			"education": "20013 中国科学院大学 认知神经科学 博士",
+			"professional_title": "",
+			"research_focus": "研究方向：情绪、思维障碍与发展心理病理",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0001.png",
+			"name": "Chao Yan, Ph.D.",
+			"title": "Laboratory Principal Investigator",
+			"affiliations": "Director and Professor of the Department of Health and Clinical Psychology, School of Psychology and Cognitive Science, East China Normal University",
+			"education": "Ph.D. degree obtained in Cognitive Neuroscience, University of Chinese Academy of Sciences, 2013",
+			"professional_title": "",
+			"research_focus": "Research Focus: Emotional and Cognitive Disorders, Developmental Psychopathology",
+			"email": ""
 		}
 	},
 	{
 		"position": 4,
 		"CN": {
-			"name": "沈蕾",
 			"avatar": "0002.png",
-			"lab_position": "",
-			"social_positions": "华东师范大学心理与认知科学学院健康与临床心理系主任、博导",
-			"education_history": [
-				"2019年 广西师范大学 心理学院 学士",
-				"2022年 上海师范大学 心理学系 硕士"
-			]
+			"name": "沈蕾",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 博士生；健康与临床心理学专业，2022 - ",
+			"professional_title": "",
+			"research_focus": "研究兴趣：计算精神病学",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0002.png",
+			"name": "Lei Shen",
+			"title": "",
+			"affiliations": "",
+			"education": "PhD Student of Health and Clinical Psychology, School of Psychology and Cognitive Science, East China Normal University, 2022 - ",
+			"professional_title": "",
+			"research_focus": "Research interest: Computational psychiatry",
+			"email": ""
+		}
+	},
+	{
+		"position": 4,
+		"CN": {
+			"avatar": "0003.png",
+			"name": "黄雅婷",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 博士生；健康与临床心理学专业，2023 - ",
+			"professional_title": "",
+			"research_focus": "研究兴趣: 情绪心理与情感神经科学",
+			"email": "欢迎与我联系交流：yatinghuang2021@126.com"
+		},
+		"EN": {
+			"avatar": "0003.png",
+			"name": "Yating Huang",
+			"title": "",
+			"affiliations": "",
+			"education": "PhD Student of Health and Clinical Psychology,School of Psychology and Cognitive Science, East China Normal University, 2023 - ",
+			"professional_title": "",
+			"research_focus": "Research interest: Affective Psychology and Affective Neuroscience",
+			"email": "Feel free to contact me anytime: yatinghuang2021@126.com"
+		}
+	},
+	{
+		"position": 4,
+		"CN": {
+			"avatar": "0004.png",
+			"name": "吴可嘉",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 直博生； 发展与教育心理学 2024 –",
+			"professional_title": "",
+			"research_focus": "研究兴趣：发展异常与发展障碍",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0004.png",
+			"name": "Kejia Wu",
+			"title": "",
+			"affiliations": "",
+			"education": "PhD Student of Health and Clinical Psychology, School of Developmental and educational psychology, 2024 –",
+			"professional_title": "",
+			"research_focus": "Research interest: Developmental abnormalities and developmental obstacles",
+			"email": ""
+		}
+	},
+	{
+		"position": 4,
+		"CN": {
+			"avatar": "0005.png",
+			"name": "夏峥",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 硕士生；情绪发展与情绪障碍 2022-",
+			"professional_title": "",
+			"research_focus": "研究兴趣：发展心理病理",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0005.png",
+			"name": "Zheng (Momo) Xia",
+			"title": "",
+			"affiliations": "",
+			"education": "Master's student in Cognitive Neuroscience, School of Psychology and Cognitive Science, East China Normal University, 2022-",
+			"professional_title": "",
+			"research_focus": "Research interest: Developmental Psychopathology",
+			"email": ""
+		}
+	},
+	{
+		"position": 4,
+		"CN": {
+			"avatar": "0006.png",
+			"name": "张新月",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 硕士生；情绪发展与情绪障碍 2022-",
+			"professional_title": "",
+			"research_focus": "研究兴趣：情绪障碍、原生家庭、人际互动",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0006.png",
+			"name": "Xinyue Zhang",
+			"title": "",
+			"affiliations": "",
+			"education": "Master's student in Cognitive Neuroscience, School of Psychology and Cognitive Science, East China Normal University, 2022-",
+			"professional_title": "",
+			"research_focus": "Research interest: Emotional disorders, native families, interpersonal interactions",
+			"email": ""
+		}
+	},
+	{
+		"position": 4,
+		"CN": {
+			"avatar": "0007.png",
+			"name": "雷雨童",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 硕士生；应用心理学专业临床与咨询方向；2022-",
+			"professional_title": "",
+			"research_focus": "研究兴趣：情绪障碍、人际关系",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0007.png",
+			"name": "Yutong Lei",
+			"title": "",
+			"affiliations": "",
+			"education": "Master's student in Cognitive Neuroscience, School of Psychology and Cognitive Science, East China Normal University, 2022-",
+			"professional_title": "",
+			"research_focus": "Research interest: Emotional disorder, interpersonal relationship",
+			"email": ""
+		}
+	},
+	{
+		"position": 4,
+		"CN": {
+			"avatar": "0008.png",
+			"name": "施淑洪",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 硕士生；应用心理学健康管理与工作心理；2022-",
+			"professional_title": "",
+			"research_focus": "研究兴趣：发展心理病理",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0008.png",
+			"name": "Shuhong Shi",
+			"title": "",
+			"affiliations": "",
+			"education": "Master's student in Cognitive Neuroscience, School of Psychology and Cognitive Science, East China Normal University;2022-",
+			"professional_title": "",
+			"research_focus": "Research interest: Developmental Psychopathology",
+			"email": ""
+		}
+	},
+	{
+		"position": 4,
+		"CN": {
+			"avatar": "0009.png",
+			"name": "姜涵珊",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 硕士生；认知神经科学专业；2023-",
+			"professional_title": "",
+			"research_focus": "研究兴趣：发展心理病理",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0009.png",
+			"name": "Hanshan Jiang",
+			"title": "",
+			"affiliations": "",
+			"education": "Master's student in Cognitive Neuroscience, School of Psychology and Cognitive Science, East China Normal University;2023-",
+			"professional_title": "",
+			"research_focus": "Research interest: Developmental Psychopathology",
+			"email": ""
+		}
+	},
+	{
+		"position": 4,
+		"CN": {
+			"avatar": "0010.png",
+			"name": "刘叶",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 硕士生；应用心理专业（临床与咨询心理学）；2023-",
+			"professional_title": "",
+			"research_focus": "研究兴趣：情绪、人际关系、亲密关系、原生家庭困扰",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0010.png",
+			"name": "Ye Liu",
+			"title": "",
+			"affiliations": "",
+			"education": "Master of Applied Psychology（Clinical and Counseling Psychology);School of Psychology and Cognitive Science, East China Normal University;2023-",
+			"professional_title": "",
+			"research_focus": "Research interest: Emotions, interpersonal relationships, intimate relationships, family of origin disturbances",
+			"email": ""
+		}
+	},
+	{
+		"position": 4,
+		"CN": {
+			"avatar": "0011.png",
+			"name": "汤毅",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 硕士生，心理学专业，2024 –",
+			"professional_title": "",
+			"research_focus": "研究兴趣：情绪与发展心理病理",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0011.png",
+			"name": "Yi Tang",
+			"title": "",
+			"affiliations": "",
+			"education": "Master's student in Psychology, School of Psychology and Cognitive Science, East China Normal University;2024-",
+			"professional_title": "",
+			"research_focus": "Research interest: Emotional and Developmental Psychopathology",
+			"email": ""
+		}
+	},
+	{
+		"position": 5,
+		"CN": {
+			"avatar": "0012.png",
+			"name": "王珂盈",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 本科生；心理学专业，2020-2024",
+			"professional_title": "",
+			"research_focus": "研究兴趣/擅长：情绪与发展心理病理",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0012.png",
+			"name": "Keying Wang",
+			"title": "",
+			"affiliations": "",
+			"education": "Bachelor Degree in Psychology, School of Psychology and Cognitive Science, East China Normal University,2020-2024；",
+			"professional_title": "",
+			"research_focus": "Research interest: Emotion and Developmental Psychopathology",
+			"email": ""
+		}
+	},
+	{
+		"position": 5,
+		"CN": {
+			"avatar": "0013.png",
+			"name": "张艺莹",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 本科生；心理学专业，2020-2024",
+			"professional_title": "",
+			"research_focus": "研究兴趣：社会决策 计算精神病学",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0013.png",
+			"name": "Yiying Zhang",
+			"title": "",
+			"affiliations": "",
+			"education": "Bachelor Degree in Psychology, School of Psychology and Cognitive Science, East China Normal University,2020-2024；",
+			"professional_title": "",
+			"research_focus": "Research interest: Social Decision-making and Computational Psychiatry",
+			"email": ""
+		}
+	},
+	{
+		"position": 5,
+		"CN": {
+			"avatar": "0014.png",
+			"name": "杨露",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 本科生；心理学专业，2020-2024",
+			"professional_title": "",
+			"research_focus": "研究兴趣：情绪障碍 情绪调控",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0014.png",
+			"name": "Lu Yang",
+			"title": "",
+			"affiliations": "",
+			"education": "Bachelor Degree in Psychology, School of Psychology and Cognitive Science, East China Normal University,2020-2024",
+			"professional_title": "",
+			"research_focus": "Research interest: Emotional disorder and Emotional regulation",
+			"email": ""
+		}
+	},
+	{
+		"position": 5,
+		"CN": {
+			"avatar": "0015.png",
+			"name": "倪圣磊",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 本科生；心理学专业，2020-2024",
+			"professional_title": "",
+			"research_focus": "研究兴趣：社会快感缺失",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0015.png",
+			"name": "Shenglei Ni",
+			"title": "",
+			"affiliations": "",
+			"education": "Bachelor Degree in Psychology, School of Psychology and Cognitive Science, East China Normal University,2020-2024",
+			"professional_title": "",
+			"research_focus": "Research interest: Social anhedonia",
+			"email": ""
+		}
+	},
+	{
+		"position": 5,
+		"CN": {
+			"avatar": "0016.png",
+			"name": "杨静雯",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 本科生；心理学专业，2021 –",
+			"professional_title": "",
+			"research_focus": "研究兴趣：内化障碍（如抑郁症）",
+			"email": "yangjingwen0315@163.com"
+		},
+		"EN": {
+			"avatar": "0016.png",
+			"name": "Jingwen Yang",
+			"title": "",
+			"affiliations": "",
+			"education": "Undergraduate Student in Psychology, School of Psychology and Cognitive Science, East China Normal University,2021-",
+			"professional_title": "",
+			"research_focus": "Research interest: Internalizing Disorders (e.g. Depressive Disorder)",
+			"email": "yangjingwen0315@163.com"
+		}
+	},
+	{
+		"position": 5,
+		"CN": {
+			"avatar": "0017.png",
+			"name": "李庆怡",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 本科生；心理学专业，2021-",
+			"professional_title": "",
+			"research_focus": "研究兴趣：发展心理病理",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0017.png",
+			"name": "Qingyi Li",
+			"title": "",
+			"affiliations": "",
+			"education": "Undergraduate Student in Psychology, School of Psychology and Cognitive Science, East China Normal University,2021-",
+			"professional_title": "",
+			"research_focus": "Research interest: Developmental Psychopathology",
+			"email": ""
+		}
+	},
+	{
+		"position": 5,
+		"CN": {
+			"avatar": "0018.png",
+			"name": "张孟霄",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 本科生；心理学专业，2021-",
+			"professional_title": "",
+			"research_focus": "研究兴趣：发展心理病理",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0018.png",
+			"name": "Mengxiao Zhang",
+			"title": "",
+			"affiliations": "",
+			"education": "Undergraduate Student in Psychology, School of Psychology and Cognitive Science, East China Normal University,2021-",
+			"professional_title": "",
+			"research_focus": "Research interest: Developmental Psychopathology",
+			"email": ""
+		}
+	},
+	{
+		"position": 5,
+		"CN": {
+			"avatar": "0019.png",
+			"name": "徐钰佳",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 本科生；心理学专业，2021-",
+			"professional_title": "",
+			"research_focus": "研究兴趣：发展心理病理 计算精神病学",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0019.png",
+			"name": "Yujia Xu",
+			"title": "",
+			"affiliations": "",
+			"education": "Undergraduate Student in Psychology, School of Psychology and Cognitive Science, East China Normal University,2021-",
+			"professional_title": "",
+			"research_focus": "Research interest: Developmental Psychopathology and Computational Psychiatry",
+			"email": ""
+		}
+	},
+	{
+		"position": 5,
+		"CN": {
+			"avatar": "0020.png",
+			"name": "罗卓",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 本科生；心理学专业，2023-",
+			"professional_title": "",
+			"research_focus": "研究兴趣：认知神经科学（计算机方向）",
+			"email": "欢迎与我联系交流: 3117178506@qq.com"
+		},
+		"EN": {
+			"avatar": "0020.png",
+			"name": "Luo Zhuo",
+			"title": "",
+			"affiliations": "",
+			"education": "Undergraduate Student in Psychology, School of Psychology and Cognitive Science, East China Normal University,2023-2027",
+			"professional_title": "",
+			"research_focus": "Research interest: Cognitive Neuroscience",
+			"email": "Feel free to contact me anytime: 3117178506@qq.com"
+		}
+	},
+	{
+		"position": 5,
+		"CN": {
+			"avatar": "0021.png",
+			"name": "张奕明",
+			"title": "",
+			"affiliations": "",
+			"education": "华东师范大学心理与认知科学学院 本科生，心理学专业，2021-2025",
+			"professional_title": "热爱生活与科研、提升学习能力与批判性思维、尽人事听天命",
+			"research_focus": "研究兴趣：临床心理学与认知神经科学，如抑郁症、强迫症以及精神分裂的阴性症状，音乐的认知机制、听觉感知和情感神经通路的交互。",
+			"email": "欢迎与我联系交流: psyafreak@163.com"
+		},
+		"EN": {
+			"avatar": "0021.png",
+			"name": "Yiming Zhang",
+			"title": "",
+			"affiliations": "",
+			"education": "Undergraduate Student in Psychology, School of Psychology and Cognitive Science, East China Normal University,2021-2025",
+			"professional_title": "",
+			"research_focus": "Research interest: Clinical Psychology and Cognitive Neuroscience, such as depression and obsessive-compulsive disorder, negative symptoms of schizophrenia, the cognitive mechanisms of music, and the interaction of emotional neural pathways and auditory perception",
+			"email": "Feel free to contact me anytime: psyafreak@163.com"
+		}
+	},
+	{
+		"position": 6,
+		"CN": {
+			"avatar": "0022.png",
+			"name": "肖婷",
+			"title": "四川省成都倍特幼儿园，园长",
+			"affiliations": "",
+			"education": "",
+			"professional_title": "",
+			"research_focus": "",
+			"email": ""
+		},
+		"EN": {
+			"avatar": "0022.png",
+			"name": "",
+			"title": "",
+			"affiliations": "",
+			"education": "",
+			"professional_title": "",
+			"research_focus": "",
+			"email": ""
 		}
 	}
 ]

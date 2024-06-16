@@ -13,7 +13,7 @@
         <!--<< Favicon >>-->
         <link rel="shortcut icon" href="assets/img/favicon.ico">
         <!-- element-plus -->
-        <link href="https://cdn.bootcdn.net/ajax/libs/element-plus/2.3.12/index.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css" />
         <!--<< Bootstrap min.css >>-->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <!--<< Font Awesome.css >>-->
@@ -26,6 +26,30 @@
         <link rel="stylesheet" href="assets/css/meanmenu.css">
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="assets/css/main.css">
+        <style>
+            .publication-items {
+                position: relative;
+            }
+    
+            .publication-items__link {
+                display: block;
+                padding: 12px 20px;
+                background-color: var(--bg);
+                border-radius: 2px;
+                line-height: 40px;
+            }
+    
+            .publication-items__link .fal {
+                color: var(--theme);
+                font-weight: bold;
+                margin-right: 4px;
+            }
+    
+            .publication-items__link:hover {
+                color: var(--theme);
+                box-shadow: var(--bs-box-shadow-sm);
+            }
+        </style>
     </head>
 
     <body>
@@ -232,51 +256,30 @@
                     <div class="row">
                         <div id="app">
                             <div style="margin-bottom: 20px;display: flex; justify-content: flex-end;">
-                                <el-select
-                                    v-model="curretYear"
-                                    placeholder="Select"
-                                    size="large"
-                                    style="margin-bottom: 40px;"
-                                >
-                                    <el-option
-                                        v-for="item in options"
-                                        :key="item.value"
-                                        :label="item.label"
-                                        :value="item.value"
-                                    />
+                                <el-select v-model="curretYear" placeholder="Select" size="large"
+                                    style="margin-bottom: 40px;">
+                                    <el-option v-for="item in options" :key="item.value" :label="item.label"
+                                        :value="item.value" />
                                 </el-select>
                             </div>
-                            <div 
-                                v-for="(item, index) in filterList" 
-                                :key="item.title" 
-                                class="single-blog-post"
-                                :style="{
-                                    marginBottom: index === filterList.length - 1 
-                                        ? 0
-                                        : (((index < filterList.length - 1) && item.year !== filterList[index + 1].year) ? '80px' : '40px')
-                                }"
-                            >
-                                <h3 
-                                    v-if="index === 0 || item.year !== filterList[index -1].year" 
-                                    style="position: absolute; top: -40px; user-select: none; line-height: 20px;"
-                                >     
+                            <div v-for="(item, index) in filterList" :key="item.title" class="publication-items" :style="{
+                                        marginBottom: index === filterList.length - 1 
+                                            ? 0
+                                            : (((index < filterList.length - 1) && item.year !== filterList[index + 1].year) ? '60px' : '20px')
+                                    }">
+                                <h3 v-if="index === 0 || item.year !== filterList[index -1].year"
+                                    style="position: absolute; top: -40px; user-select: none; line-height: 20px;">
                                     {{item.year}}年
                                 </h3>
-                                <div 
-                                    class="post-featured-thumb bg-cover" 
-                                    :style="{backgroundImage: `url(publication/${item.cover})`}"
-                                >
-                                
-                                </div>
-                                <div class="post-content">
-                                    <p class="post-meta">
-                                        <i class="fal fa-angle-double-right"></i>&nbsp;
-                                        <a :href="item.link" target="_blank">{{item.title}}</a>
-                                    </p>
-                                    <div class="post-meta">
-                                        <i class="fal fa-angle-double-right"></i>&nbsp;{{item.authors}}
+
+                                <a target="_blank" :href="item.link" class="publication-items__link">
+                                    <div>
+                                        <i class="fal fa-angle-double-right"></i>&nbsp; {{item.title}}
                                     </div>
-                                </div>
+                                    <div>
+                                        <i class="fal fa-user"></i>&nbsp;<span v-html="item.authors"></span>
+                                    </div>
+                                </a>
                             </div>
 
                             <el-empty v-if="filterList.length === 0" :description="CURRENT_LANG === 'EN'?'empty':'暂无内容'" />
@@ -285,7 +288,7 @@
                 </div>
             </div>
         </section>
-       
+
         <!-- Footer Section Start -->
         <footer class="footer-section section-bg-2">
             <div class="container">
@@ -311,12 +314,40 @@
                             <div class="single-footer-widget">
                                 <div class="widget-head">
                                     <h3 i18n="Links"></h3>
-                                </div>
+                                </div>                                
                                 <ul class="list-items">
                                     <li>
                                         <a href="https://psy.ecnu.edu.cn/" target="_blank">
                                             <i class="fas fa-chevron-right"></i>
                                             华东师范大学心理与认知科学学院
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://childpsylab.com/"
+                                            target="_blank">
+                                            <i class="fas fa-chevron-right"></i>
+                                            北京儿童医院李瑛主任
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.bch.com.cn/Html/Index.html"
+                                            target="_blank">
+                                            <i class="fas fa-chevron-right"></i>
+                                            北京儿童医院心身医学科
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"
+                                            target="_blank">
+                                            <i class="fas fa-chevron-right"></i>
+                                            首都师范大学王亚老师
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);"
+                                            target="_blank">
+                                            <i class="fas fa-chevron-right"></i>
+                                            中科院心理研究所陈楚侨老师
                                         </a>
                                     </li>
                                 </ul>
@@ -383,8 +414,8 @@
         <script src="assets/js/jquery.i18n.properties.min.js"></script>
         <!--<< Main.js >>-->
         <script src="assets/js/main.js"></script>
-        <script src="https://cdn.bootcdn.net/ajax/libs/vue/3.3.4/vue.global.prod.min.js"></script>
-        <script src="https://cdn.bootcdn.net/ajax/libs/element-plus/2.3.12/index.full.min.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="https://unpkg.com/element-plus"></script>
 
 
         <script>
@@ -392,7 +423,7 @@
                 data() {
                     const year = new Date().getFullYear();
                     const yearList = [];
-                    for (let i = 2024; i <= year; i++) {
+                    for (let i = 2010; i <= year; i++) {
                         yearList.push(i);
                     }
                     return {
@@ -422,7 +453,6 @@
                             method: 'GET',
                             success:(res) => {
                                 var CURRENT_LANG = window.localStorage.getItem('CURRENT_LANG') === 'EN' ? 'EN' : 'CN';
-                                
                                 this.list = res.sort((a,b)=> b.year - a.year).map(item => {
                                     const res = item[CURRENT_LANG] || item.CN;
 
