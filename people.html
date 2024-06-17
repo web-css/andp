@@ -239,30 +239,43 @@
                             </el-select>
                         </div>
     
-                        <div v-for="(item, index) in filterList" :key="item.name + item.avatar + index"
-                            class="team-card-items style-1" :style="{
-                                    marginBottom: index === filterList.length - 1 
-                                        ? 0
-                                        : (((index < filterList.length - 1) && item.position !== filterList[index + 1].position) ? '80px' : '40px')
-                                }">
+                        <div 
+                            v-for="(item, index) in filterList" 
+                            :key="item.name + item.avatar + index"
+                            class="team-card-items style-1" 
+                            :style="{
+                                height: item.position === 7 ? 'auto' : undefined,
+                                marginBottom: index === filterList.length - 1 
+                                    ? 0
+                                    : (((index < filterList.length - 1) && item.position !== filterList[index + 1].position) ? '80px' : '40px')
+                                }"
+                            >
                             <h3 v-if="index === 0 || item.position !== filterList[index -1].position"
                                 style="position: absolute; top: -40px; user-select: none; line-height: 20px;">
                                 {{options[item.position].label}}
                             </h3>
-    
-                            <div class="team-image">
-                                <img :src="'people/' + item.avatar" alt="team-img">
-                            </div>
-    
-                            <div class="team-content">
-                                <h3>{{item.name}}</h3>
-                                <p>{{item.title}}</p>
-                                <p>{{item.affiliations}}</p>
-                                <p>{{item.education}}</p>
-                                <p>{{item.professional_title}}</p>
-                                <p>{{item.research_focus}}</p>
-                                <p>{{item.email}}</p>
-                            </div>
+                            
+                            <template v-if="item.position === 7">
+                                <div class="team-content">
+                                    <p>{{item.title}}{{item.name}}</p>
+                                </div>
+                            </template>
+
+                            <template v-else>
+                                <div class="team-image">
+                                    <img :src="'people/' + item.avatar" alt="team-img">
+                                </div>
+        
+                                <div class="team-content">
+                                    <h3>{{item.name}}</h3>
+                                    <p>{{item.title}}</p>
+                                    <p>{{item.affiliations}}</p>
+                                    <p>{{item.education}}</p>
+                                    <p>{{item.professional_title}}</p>
+                                    <p>{{item.research_focus}}</p>
+                                    <p>{{item.email}}</p>
+                                </div>
+                            </template>
                         </div>
     
                         <el-empty v-if="filterList.length === 0" :description="CURRENT_LANG === 'EN'?'empty':'暂无内容'" />
